@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculus</title>
+
+<style>
+  
+  button:active {
+    scale: 0.9;
+  }
+
+  body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .style {
+    display: grid;
+    grid-template-columns:60px 60px 60px 60px;
+    grid-template-rows: 60px 60px 60px 60px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: none;
+    margin: auto; /* this will center the grid horizontally */
+    border: 2px solid white;
+    padding: 5px;
+  }
+  
+  button {
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 4px;
+    font-size: 1.2rem;
+    transition: scale 0.2s;
+    height: 45px;
+    width: 45px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* this will center the elements vertically */
+  }
+</style>
+
+</head>
+<body>
+  
+  
+  <h3 style="color: white; text-align: center;">calc</h3>
+
+  <div style="color: white; border: 2px solid white; width: 250px; 
+
+  text-align: center; line-height: 50px;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  font-size: larger;
+
+  height: 50px; " 
+
+  class="dadiv"></div>
+
+   <!-- bunları p içine sar-->
+
+  <div class="style">
+    <button onclick="addfunc('1')">1</button>
+    <button onclick="addfunc('2')">2</button>
+    <button onclick="addfunc('3')">3</button>
+    <button onclick="addfunc(' + ')">+</button>
+    
+    <button onclick="addfunc('4')">4</button>
+    <button onclick="addfunc('5')">5</button>
+    <button onclick="addfunc('6')">6</button>
+    <button onclick="addfunc(' - ')">-</button>
+    
+    <button onclick="addfunc('7')">7</button>
+    <button onclick="addfunc('8')">8</button>
+    <button onclick="addfunc('9')">9</button>
+    <button onclick="addfunc(' * ')">x</button>
+    
+    <button onclick="addfunc('.')">.</button>
+    <button onclick="addfunc('0')">0</button>
+    <button onclick="calculation = `` 
+    console.log(calculation);
+    console.log('all clear');
+    divmain.innerHTML = `all clear`;
+    ">del</button>
+    <button onclick="evalit()">=</button>
+  </div>
+  <script>
+    let divmain = document.querySelector('.dadiv');
+    let calculation = ``;
+
+    function render() {
+      divmain.innerHTML = ``;
+      divmain.innerHTML = calculation;
+    };
+
+    function addfunc(value) {
+      if (value) {
+        calculation += value;
+        console.log(calculation);
+        render()
+      }
+  };
+
+  function evalit() {
+    let res = eval(calculation);
+    calculation = res;
+    console.log(calculation);
+    render();
+  }
+  </script>
+</body>
+</html>

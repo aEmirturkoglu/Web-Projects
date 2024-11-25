@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+  .centerer {
+    text-align: center;
+  }
+
+  #b1, #b2, #b3{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  #daDiv {
+    padding-top: 50px;
+    display: flex; /* Add this to make the coin container a flexbox */
+    justify-content: center; /* Add this to center the coin container horizontally */
+  }
+
+  .coin-container {
+    width: 100px; /* The width of the coin */
+    height: 100px; /* The height of the coin */
+    perspective: 500px; /* The perspective for the 3D effect */
+  }
+
+  .coin {
+    width: 100%; /* The width of the coin */
+    height: 100%; /* The height of the coin */
+    position: relative; /* The position of the coin */
+    transform-style: preserve-3d; /* The transform style for the 3D effect */
+    animation: flip 1s ease-in-out infinite; /* The animation for the coin flip */
+  }
+
+  .heads, .tails {
+    width: 100%; /* The width of the images */
+    height: 100%; /* The height of the images */
+    position: absolute; /* The position of the images */
+    backface-visibility: hidden; /* The backface visibility for the images */
+  }
+
+  .heads {
+    transform: rotateY(0deg); /* The initial rotation for the heads image */
+  }
+
+  .tails {
+    transform: rotateY(180deg); /* The initial rotation for the tails image */
+  }
+
+  @keyframes flip {
+    from {
+      transform: rotateY(0deg); /* The starting rotation for the coin */
+    }
+    
+    to {
+      transform: rotateY(360deg); /* The ending rotation for the coin */
+    }
+  }
+
+  h2, button, #dadiv2, #dadiv3 { /* Add this to center the other elements */
+    text-align: center;
+  }
+
+  </style>
+
+</head>
+<body>
+  <h2>try to guess it</h2>
+
+  <div class="centerer">
+<button id="b1">heads</button>
+<button id="b2">tails</button>
+<button id="b3" onclick="scoreall = {wins:0,losses:0}; dadiv3.innerHTML=''; renderit();" >reset score</button>
+  </div>
+
+<div id="daDiv"></div>  
+<div id="dadiv2"></div>
+<div id="dadiv3"></div>
+<p class="dap"></p>
+
+<script>
+  let result;
+  let scoreall =
+    JSON.parse(localStorage.getItem("myObj")) || { wins: 0, losses: 0 };
+  const p11 = document.querySelector(".dap");
+  const dadiv1 = document.getElementById("daDiv");
+  const dadiv3 = document.getElementById("dadiv3");
+  //renderit();
+
+  const but1 = document.getElementById("b1");
+  const but2 = document.getElementById("b2");
+
+  let guest; // Declare guest
+
+  but1.addEventListener("click", () => runner("heads"));
+  but2.addEventListener("click", () => runner("tails"));
+
+  /*let*/ /* guest */ //= //prompt('heads or tails?');
+
+  function animate() {
+    // Declare a variable to store the interval ID
+    let intervalID;
+    // Define a function to clear the interval after 3000 ms
+    function stopAnimation() {
+      clearInterval(intervalID);
+      dadiv1.innerHTML = "";
+    }
+    // Set the interval to update the HTML every 1000 ms and assign it to the variable
+    intervalID = setInterval(() => {
+      dadiv1.innerHTML = `<!-- HTML -->
+<div class="coin-container">
+<div class="coin">
+  <img src="headandtailsimg/theHead.jpg" alt="Heads" class="heads"> <!-- The image for the heads side -->
+  <img src="headandtailsimg/theTail.jpg" alt="Tails" class="tails"> <!-- The image for the tails side -->
+</div>
+</div>
+`;
+    }, 900);
+    // Set a timeout to call the stopAnimation function after 3000 ms
+    setTimeout(stopAnimation, 4000);
+  }
+
+  function animateres(result) {
+    // Use a variable to store the image source based on the result
+    let imageSrc=""
+    if (result == "heads") {
+      imageSrc = "headandtailsimg/theHead.jpg";
+    } else if (result == "tails") {
+      imageSrc = "headandtailsimg/theTail.jpg";
+    }
+    // Use a setTimeout to update the HTML after 1000 ms and pass the result parameter
+    setTimeout(
+      (result) => {
+        dadiv3.innerHTML = `<img src="${imageSrc}" width='150' height='150'>`;
+      },
+      4500,////////////////
+      result
+    );
+  }
+
+  function runner(guestArg) {
+    animate();
+    guest = guestArg; // Assign guest
+    /*const*/ let randomizer = Math.random();
+    randomizer >= 0.5 ? (result = "heads") : (result = "tails");
+    randomizer; //= Math.random();
+    guest === result ? win() : lose();
+    animateres(result);
+    renderit(guest);
+  }
+
+  function renderit(guest, result) {
+    //////////////////////
+    setTimeout((result) => {
+      dadiv2.innerHTML = `wins: ${scoreall.wins}, losses ${scoreall.losses}`;
+    }, 4000);
+
+    localStorage.setItem("myObj", JSON.stringify(scoreall));
+    p11.innerHTML = `you have chosen ${guest || "nothing yet"}`;
+    setTimeout(respfunc(guest, result),5000)
+    
+  }
+
+  // Save it to localStorage
+  // bura yada aşağı araştır localStorage.setItem("myObj", JSON.stringify(scoreall));
+
+  // Retrieve it from localStorage
+  // let scoreall = JSON.parse(localStorage.getItem("myObj"));
+
+  function win(result) {
+    animateres(result);
+    scoreall.wins++;
+    //respfunc(guest, result); // Pass guest and result
+    setTimeout(()=>{p11.innerHTML = "u won"},4500)
+    dadiv3.innerHTML = ''
+    renderit();
+  }
+
+  function lose(result) {
+    animateres(result);
+    scoreall.losses++;
+    //respfunc(guest, result); // Pass guest and result
+    setTimeout(()=>{p11.innerHTML = "u lost"},4500)
+    dadiv3.innerHTML = ''
+    renderit();
+  }
+
+  function respfunc(guest, result) {
+    // setTimeout(()=>{p11.innerHTML = "u won"},5000) : setTimeout(()=>{p11.innerHTML = "u lost"},5000)
+  }
+</script>
+
+  
+</body>
+</html>

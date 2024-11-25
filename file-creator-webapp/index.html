@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Basic Node.js FileMaker</h1>
+    <form action="/save" method="POST">
+      <input type="text" name="filename" placeholder="Filename" style="width: 100px; display: block; text-align: center; margin-bottom: 5px;">
+      <textarea name="data" placeholder="Your data goes here" style="width: 250px; height: 100px;"></textarea>
+      <p style="display: inline;">.</p>
+      <input type="text" name="filetype" placeholder="Filetype" style="width: 52px;">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

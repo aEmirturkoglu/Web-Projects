@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Birthday Counter</title>
+ <link rel="stylesheet" href="birth.css">
+ <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+ <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>  
+ <div id="borderer">
+
+ <h1>Birthday Counter</h1> 
+
+ <p>Enter your date, hour and minute of birth:</p> <!-- changed the label to include the minute part -->
+ <input type="date" id="birthday-input">
+ <input type="number" id="hour-input" min="0" max="23" placeholder="Hours">
+ <input type="number" id="minute-input" min="0" max="59" placeholder="Mins"> <!-- added a new input element for the minute part -->
+ <button id="calculate-button">Calculate</button>
+ <p id="result"></p>
+
+ </div>
+ <script src="birth.js"></script>
+</body>
+</html>

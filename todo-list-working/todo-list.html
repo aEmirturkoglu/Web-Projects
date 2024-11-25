@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="/todo-list-working/css-list/todo-list.css">
+</head>
+<body>
+ <p style="opacity: 0.8;" class="todo-p">Todo list app</p>
+ 
+ <div class="theP2">
+ <input onkeypress="
+ enterKeyPressed(event)" class="input-text" type="text" placeholder="todo name">
+ <input onkeypress="
+ enterKeyPressed(event)" type="date" name="" class="dater">
+ <button class="but" onclick="
+ addTodo();
+ ">Add</button>
+ <!-- add a new button element to delete all the todo items -->
+ <button class="delete-checked-button" onclick="
+ deleteChecked();
+ ">Delete Checked</button>
+ 
+ </div>
+ <button style="margin-bottom: 10px;" class="delete-all-button" onclick="
+ deleteAll();
+ ">Delete All</button>
+ <!-- add a new button element to delete the checked items -->
+ 
+ <div style="margin-top: 10px;" class="theP">
+ </div>
+
+ <script src="/todo-list-working/js-list/todo.js"></script>
+</body>
+</html>
