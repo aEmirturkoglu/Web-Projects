@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PNG Encryption Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>PNG Encryption Website</h1>
+
+    <input type="file" id="imageUpload" accept="image/png">
+    <div id="imageDisplay"></div>
+
+    <button id="encryptButton">Encrypt PNG</button>
+
+    <div id="encryptedImageDisplay"></div>
+    <div id="keyDisplay"></div>
+
+    <a id="downloadLink" style="display:none;">Download Encrypted PNG</a>
+
+    <h2>Decrypt PNG</h2>
+    <input type="file" id="encryptedImageUpload" accept="image/png">
+    <input type="text" id="decryptionKey" placeholder="Enter decryption key">
+    <button id="decryptButton">Decrypt PNG</button>
+    <div id="decryptedImageDisplay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

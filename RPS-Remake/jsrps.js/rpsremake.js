@@ -125,34 +125,34 @@ let score = JSON.parse(localStorage.getItem('score'))
       if (playerMove == 'rock') {
 
         playerMove =  `<img style="width: 75px; height: 75px;"
-         src='/RPS-Remake/rpspngfiles/rock-paper-scissors-emoji-cartoon-007-512.webp'>`
+         src='rpspngfiles/rock-paper-scissors-emoji-cartoon-007-512.webp'>`
 
       } else if (playerMove == 'paper') {
 
         playerMove = `<img style="width: 75px; height: 75px;"
-        src='/RPS-Remake/rpspngfiles/scroll-emoji-clipart-md.webp'>`
+        src='rpspngfiles/scroll-emoji-clipart-md.webp'>`
         
       } else {
 
         playerMove = `<img style="width: 75px; height: 75px;"
-        src='/RPS-Remake/rpspngfiles/11058-black-scissors.png'>`
+        src='rpspngfiles/11058-black-scissors.png'>`
       
       };
 
       if (computerMove == 'rock') {
       
         computerMove =  `<img style="width: 75px; height: 75px;"
-        src='/RPS-Remake/rpspngfiles/rock-paper-scissors-emoji-cartoon-007-512.webp'>`
+        src='rpspngfiles/rock-paper-scissors-emoji-cartoon-007-512.webp'>`
       
       } else if (computerMove == 'paper') {
       
         computerMove = `<img style="width: 75px; height: 75px;"
-        src='/RPS-Remake/rpspngfiles/scroll-emoji-clipart-md.webp'>`      
+        src='rpspngfiles/scroll-emoji-clipart-md.webp'>`      
       
       } else {
         
         computerMove = `<img style="width: 75px; height: 75px;"
-        src='/RPS-Remake/rpspngfiles/11058-black-scissors.png'>`
+        src='rpspngfiles/11058-black-scissors.png'>`
       
       }
 
