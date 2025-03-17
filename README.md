@@ -30,5 +30,4 @@ Most of these projects are web applications that you can open directly in your w
 If a project requires additional steps or has specific instructions, it will be mentioned in its individual documentation.
 
 Let's get started exploring the projects!
-# Web-Projects
-html-css-js and some mern projects
+
