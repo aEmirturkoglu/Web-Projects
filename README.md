@@ -1,33 +1,56 @@
-# Welcome to My Web Projects Documentation
+# Web Projects Portfolio
 
-This documentation is designed to help you understand and use the various web applications and projects available in this repository.  Even if you don't have a programming background, you should be able to follow these guides to get started.
+Collection of 14 web development projects demonstrating full-stack capabilities.
 
-Each project has its own dedicated documentation page, which you can find linked below. These pages will explain what each application does and how to use it step-by-step.
+## � Project Catalog
 
-## Project Documentation
+### 🌐 Browser Extensions
+- [⏰ Clock Extension](clock-extension/README.md) - Cross-timezone browser extension with:
+  - Dark/light theme synchronization with system preferences
+  - 24-hour format toggle
+  - Customizable CSS variables for styling
+  - Automatic DST adjustments
+  - Browser action popup with quick settings
 
-*   [Birthday Calculator (birthdaycalc)](./birthdaycalc.md)
-*   [Calculator (Calculator-Final)](./calculator-final.md)
-*   [Coin Flipper (Coin-Flipper)](./coin-flipper.md)
-*   [Favicon Generator (favicon_io)](./favicon_io.md)
-*   [File Creator Web App (file-creator-webapp)](./file-creator-webapp.md)
-*   [PNG Encryption (pngencription)](./pngencription.md)
-*   [React App (reactapp)](./reactapp.md)
-*   [Rock Paper Scissors Remake (RPS-Remake)](./rps-remake.md)
-*   [Tip Calculator (tipcalc)](./tipcalc.md)
-*   [To-Do List (todo-list-working)](./todo-list-working.md)
-*   [Web Scraper (webscraper)](./webscraper.md)
+### 🧮 Calculators
+- [🔢 Scientific Calculator](Calculator-Final/README.md) - Unit conversion & advanced math functions
+- [🎂 Birthday Calculator](birthdaycalc/README.md) - Age calculator with countdown timers
+- [💸 Tip Calculator](tipcalc/README.md) - Bill splitting with custom percentage logic
 
-## General Instructions for Use
+### 🛠 Productivity Tools
+- [✅ Todo List Manager](todo-list-working/README.md) - CRUD operations with localStorage
+- [📁 File Generator](file-creator-webapp/README.md) - Dynamic file creation web interface
 
-Most of these projects are web applications that you can open directly in your web browser.  Here's how you can generally use them:
+### 🎮 Games
+- [🎲 Probability Simulator](Coin-Flipper/README.md) - Animated coin flip statistics tracker
+- [✂️ RPS Remake](RPS-Remake/README.md) - Rock Paper Scissors with gesture animations
 
-1.  **Download the project:**  If you've downloaded this repository as a zip file, extract it to a folder on your computer. If you are using Git, clone the repository to your local machine.
-2.  **Navigate to the project folder:** Open the main folder of the project you want to use (e.g., `birthdaycalc`, `Calculator-Final`).
-3.  **Open the `index.html` file:** Inside each project folder, you should find a file named `index.html`. Double-click this file to open it in your web browser (like Chrome, Firefox, Safari, or Edge).
-4.  **Use the application:** The web application should now be running in your browser. Follow the instructions on the project's documentation page to learn how to use it.
+### 🔒 Security
+- [🖼 PNG Encryptor](pngencription/README.md) - Image-based encryption system
 
-If a project requires additional steps or has specific instructions, it will be mentioned in its individual documentation.
+### 🤖 Automation
+- [� Web Scraper](webscraper/README.md) - Python site crawler with data extraction
 
-Let's get started exploring the projects!
+### ⚛️ React Ecosystem
+- [🛍 Amazon Clone](fstackreactamazon/README.md) - Full-stack ecommerce platform
+- [� React Starter](reactapp/README.md) - Vite-powered template with CI/CD
 
+### 🖼 Asset Management
+- [📐 Favicon Kit](favicon_io/README.md) - Production-ready icon set package
+
+## 🛠 Development Ecosystem
+```bash
+# Clone repository
+git clone https://github.com/yourusername/Web-Projects.git
+
+# Access any project
+cd Web-Projects/desired-project-folder
+start index.html  # Launch Windows
+```
+
+## � Contribution Matrix
+| Type      | Guidelines                          |
+|-----------|-------------------------------------|
+| Features  | Maintain existing architecture      |
+| Bugs      | Include reproduction steps          |
+| PRs       | Update ALL affected documentation   |
