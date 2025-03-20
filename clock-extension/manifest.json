@@ -1,0 +1,12 @@
+{
+  "name": "Wall Clock",
+  "version": "1.0",
+  "description": "A realistic wall clock for your browser",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "clock.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
