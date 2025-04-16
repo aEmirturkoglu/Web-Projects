@@ -4,7 +4,7 @@
   "description": "A realistic wall clock for your browser",
   "manifest_version": 3,
   "action": {
-    "default_popup": "clock.html"
+    "default_popup": "index.html"
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"

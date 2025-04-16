@@ -1,5 +1,8 @@
 {
   "Codegeex.SidebarUI.LanguagePreference": "English",
   "Codegeex.RepoIndex": true,
-  "cline.modelSettings.o3Mini.reasoningEffort": "high"
+  "cline.modelSettings.o3Mini.reasoningEffort": "high",
+  "Codegeex.Comment.LanguagePreference": "English",
+  "Codegeex.Chat.LanguagePreference": "English",
+  "Codegeex.CommitMessage.LanguagePreference": "English"
 }
